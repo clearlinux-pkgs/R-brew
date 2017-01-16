@@ -4,7 +4,7 @@
 #
 Name     : R-brew
 Version  : 1.0
-Release  : 25
+Release  : 26
 URL      : http://cran.r-project.org/src/contrib/brew_1.0-6.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/brew_1.0-6.tar.gz
 Summary  : Templating Framework for Report Generation
@@ -19,6 +19,8 @@ No detailed description available
 %setup -q -c -n brew
 
 %build
+export LANG=C
+export SOURCE_DATE_EPOCH=1484530567
 
 %install
 rm -rf %{buildroot}
@@ -31,9 +33,10 @@ export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
-R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library brew
+R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library brew
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
