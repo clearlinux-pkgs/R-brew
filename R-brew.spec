@@ -4,7 +4,7 @@
 #
 Name     : R-brew
 Version  : 1.0.6
-Release  : 36
+Release  : 37
 URL      : http://cran.r-project.org/src/contrib/brew_1.0-6.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/brew_1.0-6.tar.gz
 Summary  : Templating Framework for Report Generation
@@ -13,7 +13,9 @@ License  : GPL-2.0
 BuildRequires : clr-R-helpers
 
 %description
-No detailed description available
+R code for report generation. brew template syntax is similar
+        to PHP, Ruby's erb module, Java Server Pages, and Python's psp
+        module.
 
 %prep
 %setup -q -c -n brew
@@ -23,11 +25,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1496604342
+export SOURCE_DATE_EPOCH=1502397058
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1496604342
+export SOURCE_DATE_EPOCH=1502397058
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
