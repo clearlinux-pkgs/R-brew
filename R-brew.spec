@@ -4,7 +4,7 @@
 #
 Name     : R-brew
 Version  : 1.0.6
-Release  : 57
+Release  : 58
 URL      : https://cran.r-project.org/src/contrib/brew_1.0-6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/brew_1.0-6.tar.gz
 Summary  : Templating Framework for Report Generation
@@ -25,10 +25,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552722688
+export SOURCE_DATE_EPOCH=1552745214
 
 %install
-export SOURCE_DATE_EPOCH=1552722688
+export SOURCE_DATE_EPOCH=1552745214
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
