@@ -4,7 +4,7 @@
 #
 Name     : R-brew
 Version  : 1.0.7
-Release  : 86
+Release  : 87
 URL      : https://cran.r-project.org/src/contrib/brew_1.0-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/brew_1.0-7.tar.gz
 Summary  : Templating Framework for Report Generation
